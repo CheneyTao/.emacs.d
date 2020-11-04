@@ -32,7 +32,7 @@
 (use-package undo-tree
   :ensure t
   :config
-  (setq undo-tree-mode t))
+  (global-undo-tree-mode))
 
 ;;
 ;; hungry-delete
