@@ -9,9 +9,15 @@
 ;;
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;;
+;; Custom config
+;;
 (require 'init-elpa)
 (require 'init-ui)
 (require 'init-edit)
+(require 'init-git)
 
 ;;
 ;; Load emacs automatic generation code

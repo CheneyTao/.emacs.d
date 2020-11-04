@@ -3,9 +3,19 @@
 ;;
 (setq-default cursor-type 'box)
 
+(setq mouse-yank-at-point nil)
+(setq auto-window-vscroll nil)
 (setq blink-curser-mode nil)
 (setq ring-bell-function nil)
 (setq inhibit-startup-message t)
+(setq scroll-step 2
+      scroll-margin 2
+      hscroll-step 2
+      hscroll-margin 2
+      scroll-conservatively 101
+      scroll-up-aggressively 0.01
+      scroll-down-aggressively 0.01
+      scroll-preserve-screen-position 'always)
 
 (global-hl-line-mode t)
 (global-linum-mode t)
@@ -29,6 +39,17 @@
 (use-package color-theme-sanityinc-tomorrow
   :ensure t)
 (load-theme 'sanityinc-tomorrow-day t)
+
+;;
+;; smart-mode-line
+;;
+(use-package smart-mode-line
+  :ensure t
+  :config
+  (setq sml/no-confirm-load-theme t)
+  (sml/setup)
+  (setq sml/theme 'respectful))
+
 
 ;;
 ;; neotree
