@@ -18,6 +18,7 @@
 (require 'init-ui)
 (require 'init-edit)
 (require 'init-git)
+(require 'init-ivy)
 
 ;;
 ;; Load emacs automatic generation code
