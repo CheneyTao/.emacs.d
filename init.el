@@ -17,6 +17,7 @@
 (require 'init-elpa)
 (require 'init-ui)
 (require 'init-edit)
+(require 'init-evil)
 (require 'init-git)
 (require 'init-ivy)
 

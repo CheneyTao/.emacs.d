@@ -34,11 +34,13 @@
 ;;
 ;; color-theme
 ;;
+(use-package atom-one-dark-theme
+  :ensure t)
 (use-package base16-theme
   :ensure t)
 (use-package color-theme-sanityinc-tomorrow
   :ensure t)
-(load-theme 'sanityinc-tomorrow-day t)
+(load-theme 'atom-one-dark t)
 
 ;;
 ;; smart-mode-line
