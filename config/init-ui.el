@@ -43,7 +43,8 @@
                        :weight 'normal
                        :slant 'italic
                        :size c-size))))
-(set-font "Mononoki" "Mononoki" 16 16)
+(when (display-graphic-p)
+  (set-font "Mononoki" "Mononoki" 16 16))
 
 ;;
 ;; color-theme
