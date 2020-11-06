@@ -1,3 +1,5 @@
+;; Defer garbage collection further back in the startup process
+(setq gc-cons-threshold most-positive-fixnum)
 ;;
 ;; Load configuration path
 ;;
@@ -20,6 +22,7 @@
 (require 'init-evil)
 (require 'init-git)
 (require 'init-ivy)
+(require 'init-company)
 (require 'init-tag)
 
 ;;

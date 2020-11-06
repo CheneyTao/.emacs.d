@@ -27,9 +27,23 @@
 ;;
 ;; font
 ;;
-(set-face-attribute 'default nil :font "Mononoki"
-		    :slant 'italic
-		    :height 3)
+(defun set-font (english chinese e-size c-size)
+  "set-font is used for setting font"
+  (set-face-attribute 'default nil
+                      :font (font-spec
+                             :name english
+                             :weight 'normal
+                             :slant 'italic
+                             :size e-size))
+  (dolist (charset '(kana han symbol cjk-misc bopomofo))
+    (set-fontset-font (frame-parameter nil 'font)
+                      charset
+                      (font-spec
+                       :name chinese
+                       :weight 'normal
+                       :slant 'italic
+                       :size c-size))))
+(set-font "Mononoki" "Mononoki" 16 16)
 
 ;;
 ;; color-theme
@@ -40,7 +54,10 @@
   :ensure t)
 (use-package color-theme-sanityinc-tomorrow
   :ensure t)
-(load-theme 'atom-one-dark t)
+(if (display-graphic-p)
+    (load-theme 'atom-one-dark t)
+  (load-theme 'base16-google-dark t))
+
 
 ;;
 ;; smart-mode-line
