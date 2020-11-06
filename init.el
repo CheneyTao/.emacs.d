@@ -20,6 +20,7 @@
 (require 'init-evil)
 (require 'init-git)
 (require 'init-ivy)
+(require 'init-tag)
 
 ;;
 ;; Load emacs automatic generation code
